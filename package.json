@@ -23,7 +23,9 @@
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-simple-progress-plugin": "^0.0.4"
+    "webpack-simple-progress-plugin": "^0.0.4",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3"
   },
   "eslintConfig": {
     "root": true,
