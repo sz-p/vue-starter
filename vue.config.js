@@ -4,20 +4,26 @@ const SimpleProgressPlugin = require('webpack-simple-progress-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 let plugins = [];
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(new SimpleProgressPlugin());
-  plugins.push(new BundleAnalyzerPlugin());
+	plugins.push(new SimpleProgressPlugin());
+	plugins.push(new BundleAnalyzerPlugin());
 }
 module.exports = {
-  configureWebpack: {
-    plugins,
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          loaders: ['vue-style-loader', 'css-loader', 'sass-loader'],
-        },
-      ]
-    }
-  },
-
-}
+	configureWebpack: {
+		plugins,
+		resolve: {
+			extensions: [ '.js', '.vue', '.json', '.ts' ]
+		},
+		module: {
+			rules: [
+				{
+					test: /\.tsx?$/,
+					loader: 'ts-loader',
+					exclude: /node_modules/,
+					options: {
+						appendTsSuffixTo: [ /\.vue$/ ]
+					}
+				}
+			]
+		}
+	}
+};
