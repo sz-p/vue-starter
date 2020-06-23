@@ -5,7 +5,7 @@ import Index from '../pages/index/index';
 
 export default new Router({
   mode: 'history',
-  base: '/',
+  base: window.location.pathname,
   routes: [
     {
       path: '/',
