@@ -10,7 +10,6 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
 	configureWebpack: {
     plugins,
-    outputDir: 'build',
 		resolve: {
 			extensions: [ '.js', '.vue', '.json', '.ts' ]
 		},
