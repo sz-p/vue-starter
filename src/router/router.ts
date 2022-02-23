@@ -4,19 +4,16 @@ import {
     RouteRecordRaw
 } from 'vue-router'
 
-import Index from '@/pages/index/index.vue'
-import About from '@/pages/about/about.vue'
-
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Index',
-        component: Index
+        component: () => import('@/views/index/index'),
     },
     {
         path: '/about',
         name: 'about',
-        component: About
+        component: () => import('@/views/about/about'),
     }
 ]
 
