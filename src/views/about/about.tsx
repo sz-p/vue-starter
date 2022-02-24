@@ -6,10 +6,10 @@ export default defineComponent({
     props,
     setup() {
         return () => (
-            <div>
+            <>
                 <div class="about">about</div>
                 <router-link to="/">back</router-link>
-            </div>
+            </>
         );
     }
 })

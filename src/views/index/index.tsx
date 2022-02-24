@@ -5,10 +5,10 @@ export default defineComponent({
   props,
   setup() {
     return () => (
-      <div>
+      <>
         <div>helloworld</div>
         <router-link to="/about">about</router-link>
-      </div>
+      </>
     );
   }
 })
