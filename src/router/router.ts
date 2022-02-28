@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: '/about',
-        name: 'about',
+        name: 'About',
         component: () => import('@/views/about/about'),
     }
 ]
