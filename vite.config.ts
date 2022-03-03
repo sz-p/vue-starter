@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import eslintPlugin from 'vite-plugin-eslint'
 import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [vue(), vueJsx(), eslintPlugin({
+    include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.jxs', 'src/**/*.js', 'src/**/*.tsx']
+  })],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录
@@ -12,6 +15,7 @@ export default defineConfig({
     extensions: [".js", ".ts", ".vue", ".tsx", ".json", ".svg"],
   },
   base: './', // 设置打包路径
+
   server: {
     port: 3000, // 设置服务启动端口号
     open: true, // 设置服务启动时是否自动打开浏览器
