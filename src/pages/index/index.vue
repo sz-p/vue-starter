@@ -5,11 +5,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { EmitsOptions, SetupContext } from "vue";
 export default {
-  name: "Index",
-  data() {
-    return {};
-  }
+  setup(props, context: SetupContext<EmitsOptions>) {},
 };
 </script>

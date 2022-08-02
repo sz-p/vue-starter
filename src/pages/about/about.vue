@@ -9,11 +9,9 @@
 @import "./aboutStyle";
 </style>
 
-<script>
+<script lang="ts">
+import { EmitsOptions, SetupContext } from "vue";
 export default {
-  name: "About",
-  data() {
-    return {};
-  }
+  setup(props, context: SetupContext<EmitsOptions>) {},
 };
 </script>
